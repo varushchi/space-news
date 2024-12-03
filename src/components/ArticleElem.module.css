@@ -1,0 +1,127 @@
+.article {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform 0.2s ease;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.article:hover {
+  transform: translateY(-5px);
+}
+
+.article h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 4.8em;
+  line-height: 1.6;
+}
+
+.article img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.article p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+.article a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  margin-top: auto;
+}
+
+.article a:hover {
+  background-color: #2980b9;
+}
+
+.articleFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.likeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s ease;
+}
+
+.likeButton:hover {
+  transform: scale(1.1);
+}
+
+.liked {
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.articleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.articleHeader h2 {
+  margin: 0;
+  padding-right: 20px;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.article:hover .deleteButton {
+  opacity: 1;
+}
+
+.deleteButton:hover {
+  transform: scale(1.1);
+  color: #c0392b;
+} 
