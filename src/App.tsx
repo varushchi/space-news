@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 import ArticleList from './pages/ArticleList/ArticleList';
@@ -14,6 +14,7 @@ function App() {
       <Router>
         <div className="App">
           <Routes>
+            <Route path="/" element={<Navigate to="/products" replace />} />
             <Route path="/products" element={<ArticleList />} />
             <Route path="/products/:id" element={<ArticleDetail />} />
             <Route path="/create-product" element={<CreateArticle />} />
